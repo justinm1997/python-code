@@ -24,7 +24,7 @@ person_name =  input("Person's name:   ")
 videogames = input("Videogame's name    ")
 time_of_day = input("Time of day(Morning, Afternoon, Mid-Night)    ")
 person_age = input("Your Age   ")
-activity = input("What do you like to do in your spare time    ")
+activity = input("What do you like to do in your spare time?    ")
 mood = input("Your mood    ")
 
 
@@ -33,6 +33,7 @@ mood = input("Your mood    ")
 print(f"\n\n\n{person_name} loves to play video games especially {videogames} untill {time_of_day}.")
 print(f"{person_name} is {person_age} years old and also enjoys to {activity}.")
 print(f"{person_name} is usually in a {mood} mood every day. ")
+
 
 
 
