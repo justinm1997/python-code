@@ -13,6 +13,8 @@ Please ensure your code meets the following before submitting:
 [ ] 7. Upload to GitHub and add instructor as a contributor.
 -----------------------------------------------------------------------
 
+
+Hey Meri!!(: i gave it my best effort i was a little confused on somethings but i feel like im on the right path (:
 """
 
 # Variables
@@ -38,6 +40,7 @@ print(f"\n\n\n{characters_name} Myers")
 print(f"Characters level: {characters_level} ")
 print(f"Characters finesse: {characters_finesse}")
 print(f"{characters_name} myers is alive: {alive}")
+
 
 
 
