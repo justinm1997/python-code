@@ -15,8 +15,16 @@ ASSIGNMENT REQUIREMENTS
 
 # Inputs
 
-print("\n\n\n What's your monthly Income(Float): $2,000")
-print("What's 5 different expense amounts(Float):  ")
+print("\n\n\n What's your monthly Income?   ")
+print("What's 5 different expense amounts?  ")
+
+
+# variables
+Groceries = float(input("Amount spent on groceries?    "))
+Monthly_memberships = float(input("Amount spent on monthly memberships?   "))
+Pets = float(input("Amount spent on pets?    "))
+video_games = float(input("Amount spent on video games?    "))
+Monthly_bills = float(input("Amount spent on monthly bills?   ")) 
 
 
 
