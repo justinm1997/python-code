@@ -29,15 +29,12 @@ spent = Groceries + Monthly_memberships + Monthly_bills + video_games + Pets
 
 remaining = Groceries - Monthly_memberships - Monthly_bills - video_games - Pets
 
-percent = 
-
 
 # Output
 
 print(f"You recieve {Income: ,.2f}")
 print(f"You spend{spent: ,.2f} a month.")
 print(f"You have {remaining: ,.2f} left")
-print(f"You spent {percent: ,.2f} on snacks")
 
 
 
