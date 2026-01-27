@@ -10,16 +10,11 @@ ASSIGNMENT REQUIREMENTS
 [ ] 6. Output formatted to 2 decimal places (:,.2f).
 -----------------------------------------------------------------------
 """
-
-
-
-# Inputs
-
-print("\n\n\n What's your monthly Income?   ")
-print("What's 5 different expense amounts?  ")
+print("What is your monthly income")
 
 
 # variables
+
 Groceries = float(input("Amount spent on groceries?    "))
 Monthly_memberships = float(input("Amount spent on monthly memberships?   "))
 Pets = float(input("Amount spent on pets?    "))
@@ -29,6 +24,12 @@ Monthly_bills = float(input("Amount spent on monthly bills?   "))
 
 
 # Calculations
+
+spent = Groceries + Monthly_memberships + Monthly_bills + video_games + Pets
+
+remaining = Groceries - Monthly_memberships - Monthly_bills - video_games - Pets
+
+percent = 
 
 
 
