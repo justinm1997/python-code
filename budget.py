@@ -11,7 +11,12 @@ ASSIGNMENT REQUIREMENTS
 -----------------------------------------------------------------------
 """
 
+
+
 # Inputs
+
+print("\n\n\n What's your monthly Income(Float): $2,000")
+print("What's 5 different expense amounts(Float):  ")
 
 
 
