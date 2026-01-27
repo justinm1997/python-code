@@ -10,7 +10,6 @@ ASSIGNMENT REQUIREMENTS
 [ ] 6. Output formatted to 2 decimal places (:,.2f).
 -----------------------------------------------------------------------
 """
-print("What is your monthly income?  ")
 
 
 # variables
@@ -29,6 +28,8 @@ Monthly_bills = float(input("Amount spent on monthly bills?   "))
 spent = Groceries + Monthly_memberships + Monthly_bills + video_games + Pets
 
 remaining = Groceries - Monthly_memberships - Monthly_bills - video_games - Pets
+
+percent = 
 
 
 # Output
