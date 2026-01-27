@@ -10,3 +10,18 @@ ASSIGNMENT REQUIREMENTS
 [ ] 6. Output formatted to 2 decimal places (:,.2f).
 -----------------------------------------------------------------------
 """
+
+# Inputs
+
+
+
+# Calculations
+
+
+
+
+
+# Output
+
+
+
