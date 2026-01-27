@@ -15,11 +15,14 @@ spent = snacks + video_games
 
 remaining = allowence - snacks - video_games
 
+percent = snacks/allowence
+
 
 # Display 
 
 print(f"You recieve {allowence: ,.2f}")
 print(f"You spend{spent: ,.2f} a month.")
 print(f"You have {remaining: ,.2f} left")
+print(f"You spent {percent: ,.2f} on snacks")
 
 
