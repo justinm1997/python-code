@@ -14,28 +14,26 @@ ASSIGNMENT REQUIREMENTS
 
 # variables
 
-Income = float(input("How much is your monthly income?     "))
-Groceries = float(input("Amount spent on groceries?    "))
-Monthly_memberships = float(input("Amount spent on monthly memberships?   "))
-Pets = float(input("Amount spent on pets?    "))
+income = float(input("How much is your monthly income?     "))
+groceries = float(input("Amount spent on groceries?    "))
+monthly_memberships = float(input("Amount spent on monthly memberships?   "))
+pets = float(input("Amount spent on pets?    "))
 video_games = float(input("Amount spent on video games?    "))
-Monthly_bills = float(input("Amount spent on monthly bills?   ")) 
-
+monthly_bills = float(input("Amount spent on monthly bills?   ")) 
 
 
 # Calculations
 
-spent = Groceries + Monthly_memberships + Monthly_bills + video_games + Pets
+spent = groceries + monthly_memberships + monthly_bills + video_games + pets
 
-remaining = Groceries - Monthly_memberships - Monthly_bills - video_games - Pets
+remaining = income - groceries - monthly_memberships - monthly_bills - video_games - pets
 
+percent = remaining/income 
 
 # Output
 
-print(f"You recieve {Income: ,.2f}")
-print(f"You spend{spent: ,.2f} a month.")
+print(f"You recieve {income: ,.2f}")
+print(f"You spend {spent: ,.2f} a month.")
 print(f"You have {remaining: ,.2f} left")
-
-
-
+print(f"You spent {percent: ,.2f} On Monthly cost")
 
