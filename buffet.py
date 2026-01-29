@@ -17,10 +17,11 @@ REQUIREMENTS:
 
 # Variables
 
-age = int(input("How old are you (1-99)?    "))
+age = int(input("How old are you (0-99)?    "))
 
 
 if age <= 1:
     print("Kids under 1 eat free!($0.00)    ")
-else:
-    print("You can't eat for free!!    ")
+
+elif age >= 2 or age <= 11:
+    print("$16.95 Standard adult price")
