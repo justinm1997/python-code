@@ -31,3 +31,11 @@ if temp <= 32:
         print("Wear boots and a parka.   ")
     else:
         print("Don't forget your coat.   ")
+
+else:
+    print("It is warm enough for water")  # Not freezing, roads may be wet
+    rain = input("Is it going to rain? (y/n)    ")
+    if rain == "y" or "Y":
+        print("Bring your umbrella")
+    else:
+        print("Sneakers are fine")
