@@ -16,3 +16,5 @@ REQUIREMENTS:
 """
 
 
+# Variables
+age = int(input("How old are you?(1-99)    "))
