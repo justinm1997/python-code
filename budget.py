@@ -19,8 +19,7 @@ groceries = float(input("Amount spent on groceries?    "))
 monthly_memberships = float(input("Amount spent on monthly memberships?   "))
 pets = float(input("Amount spent on pets?    "))
 video_games = float(input("Amount spent on video games?    "))
-monthly_bills = float(input("Amount spent on monthly bills?   ")) 
-
+monthly_bills = float(input("Amount spent on monthly bills?   "))
 
 # Calculations
 
@@ -30,9 +29,13 @@ remaining = income - groceries - monthly_memberships - monthly_bills - video_gam
 
 percent = remaining/income 
 
+
+
 # Output
 
 print(f"You recieve {income: ,.2f}")
 print(f"You spend {spent: ,.2f} a month.")
 print(f"You have {remaining: ,.2f} left")
 print(f"You spent {percent: ,.2f} On Monthly cost")
+print(f"You spent {percent: ,.2f} On Monthly cost")
+
