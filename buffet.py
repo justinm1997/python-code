@@ -22,5 +22,5 @@ age = int(input("How old are you (1-99)?    "))
 
 if age <= 1:
     print("Kids under 1 eat free!($0.00)    ")
-elif age < 2:
-    print("You can't eat for free!! ")
+else:
+    print("You can't eat for free!!    ")
