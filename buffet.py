@@ -15,7 +15,6 @@ REQUIREMENTS:
 -----------------------------------------------------------------------
 """
 
-
 # Variables
 
 age = int(input("How old are you (1-99)?    "))
@@ -24,15 +23,11 @@ age = int(input("How old are you (1-99)?    "))
 if age <= 1:
     print("Kids under 1 eat free!($0.00)    ")
 
-if age >= 1-11:
+if age >= 1 - 11:
     print("$1.00 per year of age(Example: 5 years = $5.00)    ")
 
-if age >= 12-64:
+if age >= 12 - 64:
     print("$16.95 (Standard Adult)   ")
 
-if age >= 65-99:
+if age >= 65 - 99:
     print("$12.95 (Senior Discount)   ")
-
-
-
-
