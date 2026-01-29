@@ -24,4 +24,13 @@ if age <= 1:
     print("Kids under 1 eat free!($0.00)    ")
 
 elif age >= 2 or age <= 11:
-    print("$16.95 Standard adult price")
+    print("$1.00 per year of age (Example: 5 years = $5.00)")
+
+elif age >= 12 or age <= 64:
+    print("$16.95 (Standard Adult) ")
+
+elif age >= 65 or age <= 99:
+    print("$12.95 (Senior Discount) ")
+
+else:
+    print("Are you alive?? ")
