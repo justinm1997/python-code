@@ -39,3 +39,18 @@ else:
         print("Bring your umbrella")
     else:
         print("Sneakers are fine")
+
+# elif
+
+age = int(input("How old are you?   "))
+if age < 16:
+    print("You can't drive yet.")
+elif age < 18:
+    print("You can't vote yet!")
+elif age < 21:
+    print("You can't drink yet!")
+elif age < 63:
+    print("You can't retire yet!")
+    print("Are you counting the years?")
+else:
+    print("Where would you like to retire to?")
