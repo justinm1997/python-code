@@ -12,5 +12,22 @@ REQUIREMENTS:
    - 12 to 64: $16.95 (Standard Adult)
    - 65 and older: $12.95 (Senior Discount)
 3. Print the final price formatted as currency (e.g., $16.95).
+
+    conditionals - if then statements
 -----------------------------------------------------------------------
 """
+
+# get a value
+
+temp = int(input("What is the outside temperature (F)?  "))
+
+# is it cold?
+
+if temp <= 32:
+    print("It is freezing!!   ")
+
+    snow = input("Is it going to snow? (y/n)   ")
+    if snow == "y" or "Y":
+        print("Wear boots and a parka.   ")
+    else:
+        print("Don't forget your coat.   ")
