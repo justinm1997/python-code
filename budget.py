@@ -33,9 +33,8 @@ percent = remaining/income
 
 # Output
 
-print(f"You recieve {income: ,.2f}")
-print(f"You spend {spent: ,.2f} a month.")
-print(f"You have {remaining: ,.2f} left")
-print(f"You spent {percent: ,.2f} On Monthly cost")
-print(f"You spent {percent: ,.2f} On Monthly cost")
+print(f"You recieve ${income: ,.2f} a month")
+print(f"You spend ${spent: ,.2f} a month.")
+print(f"You have ${remaining: ,.2f} left")
+print(f"You spent {percent: ,.2f}% On Monthly cost")
 
