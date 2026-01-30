@@ -33,4 +33,4 @@ elif age <= 99:
     print("$12.95 (Senior Discount) ")
 
 else:
-    print("Are you alive?? ")
+    print("Wow! You're alive!? ")
