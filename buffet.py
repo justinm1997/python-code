@@ -19,18 +19,33 @@ REQUIREMENTS:
 
 age = int(input("How old are you (0-99)?    "))
 
+#calculations 
+
+final_price = 1 * age
+under1_price = 0
+standard_adult_price = 16.95
+senior_discount_price = 12.95
+over_age_price = 0
+
 
 if age < 1:
     print("Kids under 1 eat free!($0.00)    ")
+    print(f"You owe ${under1_price: ,.2f} ")
 
 elif age <= 11:
-    print("$1.00 per year of age (Example: 5 years = $5.00)")
+    print("$1.00 per year of age (Example: 5 years = $5.00) ")
+    print(f"You owe ${final_price: ,.2f} ")
 
 elif age <= 64:
     print("$16.95 (Standard Adult) ")
+    print(f"You owe ${standard_adult_price: ,.2f} ")
 
 elif age <= 99:
     print("$12.95 (Senior Discount) ")
+    print(f"You owe ${senior_discount_price: ,.2f} ")
 
 else:
     print("Wow! You're alive!? ")
+    print("You can eat free on the house :) ")
+    print(f"You owe ${over_age_price: ,.2f} ")
+
