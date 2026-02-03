@@ -16,7 +16,7 @@ ASSIGNMENT REQUIREMENTS
 # num 1
 
 
-life_level = int(input("What level are you in life? (0-99)   "))
+life_level = int(input("What level are you in life? (0-lowest,99-highest)  "))
 action_work = 1
 action_hobby = 2
 action_relationships = 3
