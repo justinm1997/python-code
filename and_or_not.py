@@ -13,4 +13,4 @@ print(a > c)
 print(a > c and c > b)
 print(a > c or c > b)
 
-print(c < 0)
+print("c < 0: ", (c > 0))
