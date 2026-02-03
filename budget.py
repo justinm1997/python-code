@@ -11,7 +11,6 @@ ASSIGNMENT REQUIREMENTS
 -----------------------------------------------------------------------
 """
 
-
 # variables
 
 income = float(input("How much is your monthly income?     "))
@@ -25,10 +24,11 @@ monthly_bills = float(input("Amount spent on monthly bills?   "))
 
 spent = groceries + monthly_memberships + monthly_bills + video_games + pets
 
-remaining = income - groceries - monthly_memberships - monthly_bills - video_games - pets
+remaining = (
+    income - groceries - monthly_memberships - monthly_bills - video_games - pets
+)
 
-percent = remaining/income 
-
+percent = remaining / income
 
 
 # Output
@@ -37,4 +37,3 @@ print(f"You recieve ${income: ,.2f} a month")
 print(f"You spend ${spent: ,.2f} a month.")
 print(f"You have ${remaining: ,.2f} left")
 print(f"You spent {percent: ,.2f}% On Monthly cost")
-
