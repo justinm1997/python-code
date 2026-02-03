@@ -12,8 +12,25 @@ ASSIGNMENT REQUIREMENTS
 """
 
 # variables
+
+# num 1
+
+
 life_level = int(input("What level are you in life? (0-99)   "))
+action_work = 1
+action_hobby = 2
+action_relationships = 3
+
+# num 2
+
 age = int(input("How old are you? (0-99) "))
+action_older = 1
+action_middle = 2
+action_young = 3
+
+
+#
+
 
 # if/else/elif
 
@@ -40,9 +57,12 @@ elif age >= 30:
 elif age >= 18:
     age_description = "You're an adult now welcome to the club!"
 elif age >= 13:
-    age_description = "Welcome to your teens, don't blink it goes fast!"
+    age_description = "Welcome to your teens, don't blink it goes by fast!"
 else:
     age_description = "Wow, you're so young like a baby!"
+
+
+# Logical checks
 
 
 # outputs
