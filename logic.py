@@ -12,7 +12,7 @@ ASSIGNMENT REQUIREMENTS
 """
 
 # num 1
-life_level = int(input("What level are you in life?  "))
+life_level = int(input("What level are you in life?(0-100)  "))
 
 # num 2
 age = int(input("How old are you? "))
