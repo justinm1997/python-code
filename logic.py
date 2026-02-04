@@ -90,6 +90,6 @@ print("Either Even:", either_even)
 print("Either < 100:", either_less_than_100)
 print("Not Equal:", not_equal)
 print("Not Zero:", not_zero)
-print(f"\n\nThe first number {life_level} is {num1}")
-print(f"The second number {age} is {num2}")
+print(f"\n\nYour life level {life_level} is {num1}")
+print(f"Your age {age} is {num2}")
 
