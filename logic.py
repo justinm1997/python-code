@@ -16,20 +16,12 @@ ASSIGNMENT REQUIREMENTS
 # num 1
 
 
-life_level = int(input("What level are you in life? (0-lowest,99-highest)  "))
-action_work = 1
-action_hobby = 2
-action_relationships = 3
+life_level = int(input("What level are you in life?  "))
 
 # num 2
 
-age = int(input("How old are you? (0-99) "))
-action_older = 1
-action_middle = 2
-action_young = 3
+age = int(input("How old are you? "))
 
-
-#
 
 
 # if/else/elif
@@ -61,11 +53,50 @@ elif age >= 13:
 else:
     age_description = "Wow, you're so young like a baby!"
 
+if life_level > 0:
+    num1 = "Positive"
+elif life_level < 0:
+    num1 = "Negative"
+else:
+    num1 = "Zero"
 
-# Logical checks
+if age > 0:
+    num2 = "Positive"
+elif life_level < 0:
+    num2 = "Negative"
+else:
+    num2 = "Zero"
+
+
+# both > 0
+both_greater_than_zero = life_level > 0 and age > 0 
+
+# both > 100 
+both_greater_than_100 = life_level > 100 and age > 100
+
+# either even
+either_even = life_level % 2 == 0 or age % 2 == 0
+
+# either < 100
+either_less_than_100 = life_level < 100 or age < 100
+
+# not equal
+not_equal = life_level != age
+
+# not zero
+not_zero = life_level != 0 and age != 0 
+
 
 
 # outputs
 
-print(f"{level}")
-print(f"{age_description}")
+print(f"\n\n{level} {age_description}")
+print("\n\nBoth > 0:", both_greater_than_zero)
+print("Both > 100:", both_greater_than_100 )
+print("Either Even:", either_even)
+print("Either < 100:", either_less_than_100)
+print("Not Equal:", not_equal)
+print("Not Zero:", not_zero)
+print(f"\n\nThe first number {life_level} is {num1}")
+print(f"The second number {age} is {num2}")
+
