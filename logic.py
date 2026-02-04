@@ -11,18 +11,11 @@ ASSIGNMENT REQUIREMENTS
 -----------------------------------------------------------------------
 """
 
-# variables
-
 # num 1
-
-
 life_level = int(input("What level are you in life?  "))
 
 # num 2
-
 age = int(input("How old are you? "))
-
-
 
 # if/else/elif
 
