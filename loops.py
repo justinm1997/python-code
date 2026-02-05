@@ -38,6 +38,9 @@ while the_nagging_kid:
 ## range(start, stop, step)
 # This starts at 99, stops BEFORE it hits 1, and steps by -1
 
-for i in range(99, 1, -1):
-    print(f"{i}...")
-    print("")
+
+for i in range(99, 0, -1):
+    next_i = i - 1
+    print(
+        f"{i} bottles of beer on the wall, {i} bottles of beer. take one down, pass it around, {next_i} bottles of beer on the wall"
+    )
