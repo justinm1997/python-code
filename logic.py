@@ -63,6 +63,8 @@ else:
     num2 = "Zero"
 
 
+# Logic checks
+
 # both > 0
 both_greater_than_zero = life_level > 0 and age > 0
 
