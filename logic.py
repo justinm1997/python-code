@@ -11,6 +11,8 @@ ASSIGNMENT REQUIREMENTS
 -----------------------------------------------------------------------
 """
 
+# User inputs
+
 # num 1
 life_level = int(input("What level are you in life?(0-100)  "))
 
