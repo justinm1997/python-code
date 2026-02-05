@@ -23,8 +23,21 @@ while the_nagging_kid:
     # We must change the state to stop the loop
 
     answer = input("Are we finally here? (y/n):   ")
-    if answer == "y" or answer == "Y":
+    if (
+        answer == "y"
+        or answer == "Y"
+        or answer == "Yes"
+        or answer == "YES"
+        or answer == "yes"
+    ):
         the_nagging_kid = False
 
 
 # task 2
+
+## range(start, stop, step)
+# This starts at 99, stops BEFORE it hits 1, and steps by -1
+
+for i in range(99, 1, -1):
+    print(f"{i}...")
+    print("")
