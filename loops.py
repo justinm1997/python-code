@@ -12,3 +12,19 @@ ASSIGNMENT REQUIREMENTS
 [ ] 4. Upload to GitHub and paste the link below.
 -----------------------------------------------------------------------
 """
+
+# task 1
+
+the_nagging_kid = True
+
+while the_nagging_kid:
+    print("Are we there yet?  ")
+
+    # We must change the state to stop the loop
+
+    answer = input("Are we finally here? (y/n):   ")
+    if answer == "y" or answer == "Y":
+        the_nagging_kid = False
+
+
+# task 2
