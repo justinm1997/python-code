@@ -9,13 +9,13 @@ while len(first_name) == 0:
     first_name = input("What is your legal first name?  ")
 
 
-first_name = ""
-while len(first_name) == 0:
-    first_name = input("What is your legal first name?  ")
+last_name = ""
+while len(last_name) == 0:
+    last_name = input("What is your legal last name?  ")
 
-age = ""
-while age < 16 or len(age) == 0:
-    age = input("What is your age?   ")
+age = 0
+while age < 16:
+    age = int(input("What is your age?   "))
     if age < 0 or age > 70:
         print("I'm sorry, that is not a valid age")
     elif age > 24:
@@ -24,8 +24,8 @@ while age < 16 or len(age) == 0:
         print("I'm sorry, we cannot rent to you")
 
 
-valid = input("Do you have a valid drivers license (Y/N)").upper
+valid = input("Do you have a valid drivers license (Y/N)").upper()
 if valid == "Y":
-    pass
+    print("What kind of car would you like to rent")
 else:
     print("I'm sorry, we cannot rent to you   ")
