@@ -22,12 +22,15 @@ while chaperone != "Y" and chaperone != "N":
     print("❌ Error: Please enter only Y or N.")
     chaperone = input("Parent volunteering to chaperone? (Y/N): ").upper()
 
+
 # 3. Phone number ( cannot be blank )
 phone_number = input("Enter your phone number ")
 while phone_number == "":
     print("❌ Error: phone number cannot be blank.")
     phone_number = input("Please enter phone number: ")
 
+
+print(f"\n✅ Registration Complete for {first_name}!")
 
 # 4. Validate Ticket Count (Must be an Integer)
 tickets = 0
