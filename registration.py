@@ -15,6 +15,12 @@ while first_name == "":
     print("❌ Error: Name cannot be blank.")
     first_name = input("Please enter First Name: ")
 
+# 1. Validate last Name (Cannot be blank)
+last_name = input("Enter Last Name: ")
+while last_name == "":
+    print("❌ Error: Name cannot be blank.")
+    last_name = input("Please enter Last Name: ")
+
 
 # 2. Validate Chaperone Status (Must be Y or N)
 chaperone = input("Parent volunteering to chaperone? (Y/N): ").upper()
@@ -23,14 +29,14 @@ while chaperone != "Y" and chaperone != "N":
     chaperone = input("Parent volunteering to chaperone? (Y/N): ").upper()
 
 
+print(f"\n✅ Registration Complete for {first_name}!")
+
 # 3. Phone number ( cannot be blank )
 phone_number = input("Enter your phone number ")
 while phone_number == "":
     print("❌ Error: phone number cannot be blank.")
     phone_number = input("Please enter phone number: ")
 
-
-print(f"\n✅ Registration Complete for {first_name}!")
 
 # 4. Validate Ticket Count (Must be an Integer)
 tickets = 0
