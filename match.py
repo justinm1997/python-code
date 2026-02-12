@@ -40,7 +40,7 @@ while True:
     else:
         print("Im sorry that is not a valid menu number")
 
-    print(f"That will be {total:,.2f}")
+    print(f"That will be ${total:,.2f}")
 
 
 month = input("Enter a month name: ").lower()
