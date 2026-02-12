@@ -13,10 +13,10 @@ ASSIGNMENT REQUIREMENTS
 
 # User inputs
 
-# num 1
+# life category
 life_level = int(input("What level are you in life?(0-100)  "))
 
-# num 2
+# age category
 age = int(input("How old are you? "))
 
 # if/else/elif
