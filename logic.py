@@ -49,18 +49,18 @@ else:
     age_description = "Wow, you're so young like a baby!"
 
 if life_level > 0:
-    num1 = "Positive"
+    life_category = "Positive"
 elif life_level < 0:
-    num1 = "Negative"
+    life_category = "Negative"
 else:
-    num1 = "Zero"
+    life_category = "Zero"
 
 if age > 0:
-    num2 = "Positive"
+    age_category = "Positive"
 elif life_level < 0:
-    num2 = "Negative"
+    age_category = "Negative"
 else:
-    num2 = "Zero"
+    age_category = "Zero"
 
 
 # Logic checks
