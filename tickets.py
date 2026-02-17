@@ -11,59 +11,45 @@ ASSIGNMENT 6A: TICKET SALES
 -----------------------------------------------------------------------
 """
 
-seats_available = [
-    "seat 1",
-    "seat 2",
-    "seat 3",
-    "seat 4",
-    "seat 5",
-    "seat 6",
-    "seat 7",
-    "seat 8",
-    "seat 9",
-    "seat 10",
-    "seat 11",
-    "seat 12",
-    "seat 13",
-    "seat 14",
-    "seat 15",
-    "seat 16",
-    "seat 17",
-    "seat 18",
-    "seat 19",
-    "seat 20",
-]
+# 1. Create a list of 20 seats (numbered 1-20)
+seats_available = [f"seat {i}" for i in range(1, 21)]
 
-seats_not_available = [
-    "seat 1",
-    "seat 2",
-    "seat 3",
-    "seat 4",
-    "seat 5",
-    "seat 6",
-    "seat 7",
-    "seat 8",
-    "seat 9",
-    "seat 10",
-    "seat 11",
-    "seat 12",
-    "seat 13",
-    "seat 14",
-    "seat 15",
-    "seat 16",
-    "seat 17",
-    "seat 18",
-    "seat 19",
-    "seat 20",
-]
+# 6. Repeat until user quits or seats are empty
+while True:
+    print("\nAvailable seats:")
+    print(seats_available)
 
+    # 3. Ask user for a seat number (0 to quit)
+    choice = input("\nWhich seat do you want? (1–20, or 0 to quit): ")
 
+    # Validate numeric input
+    if not choice.isdigit():
+        print("Invalid input. Please enter a number.")
+        continue
 
+    choice = int(choice)
 
-print(f"\n\nCurrently available seats:  {seats_available} ")
+    if choice == 0:
+        print("Goodbye!")
+        break
 
+    # 5. Handle invalid seat numbers
+    if choice < 1 or choice > 20:
+        print("That seat does not exist.")
+        continue
 
-int(input("Which seat do you want?(1-20)    "))
+    seat_name = f"seat {choice}"
 
+    # 5. Handle seat already taken
+    if seat_name not in seats_available:
+        print("Sorry, that seat is already taken.")
+        continue
 
-if choice = seats_available 
+    # 4. Remove the selected seat from the list
+    seats_available.remove(seat_name)
+    print(f"Your seat {choice} is confirmed!")
+
+    # Stop if no seats left
+    if not seats_available:
+        print("\nAll seats are sold out!")
+        break
