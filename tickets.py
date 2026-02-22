@@ -10,3 +10,41 @@ ASSIGNMENT 6A: TICKET SALES
 [ ] 6. Repeat until user quits or seats are empty.
 -----------------------------------------------------------------------
 """
+
+
+seats = list(range(1, 21))
+
+
+while True:
+    print("\nAvailable seats:", seats)
+
+    # Input validation
+
+    choice = input("\nPick a seat number (0 to exit): ")
+
+    if not choice.isdigit():
+        print("\nPlease enter a valid number (1-20)")
+        continue
+
+    choice = int(choice)
+
+    # Exit switch
+
+    if choice == 0:
+        print("\nGoodbye!")
+        break
+
+    # Seat check
+
+    if choice in seats:
+        seats.remove(choice)
+        print(f"\nSeat {choice} sold!")
+    else:
+        print("\nSorry, that seat is not available")
+
+    # Sold out
+
+    if len(seats) == 0:
+        print("\nAll seats are sold out! Goodbye!")
+        break
+    
