@@ -14,6 +14,7 @@ Name: [YOUR NAME HERE]
 
 # --- TASK 1: TUNING THE GUITAR ðŸŽ¸ ---
 instrument = "Acoustic Guitar"
+
 # TODO: Print the length of 'instrument'
 # TODO: Print the first and last letter of 'instrument'
 # TODO: Use min() and max() to find and print the lowest and highest ASCII characters
