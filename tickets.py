@@ -11,6 +11,10 @@ ASSIGNMENT 6A: TICKET SALES
 -----------------------------------------------------------------------
 """
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a856df4245ee8ce26c1e4ee34986a595ad17407a
 seats = list(range(1, 21))
 
 
@@ -46,3 +50,4 @@ while True:
     if len(seats) == 0:
         print("\nAll seats are sold out! Goodbye!")
         break
+    
