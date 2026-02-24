@@ -32,7 +32,7 @@ for month in MONTHS:
 
 try:
     # Tuples are physically locked. This triggers a TypeError.
-    MONTHS[0] = "Newmonth"  # this will cause a type error
+    MONTHS[0] = "NewMonth"  # this will cause a type error
 
 except TypeError:
     print("Error: System settings are locked and immutable! ")
