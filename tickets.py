@@ -11,45 +11,38 @@ ASSIGNMENT 6A: TICKET SALES
 -----------------------------------------------------------------------
 """
 
-# 1. Create a list of 20 seats (numbered 1-20)
-seats_available = [f"seat {i}" for i in range(1, 21)]
+seats = list(range(1, 21))
 
-# 6. Repeat until user quits or seats are empty
+
 while True:
-    print("\nAvailable seats:")
-    print(seats_available)
+    print("\nAvailable seats:", seats)
 
-    # 3. Ask user for a seat number (0 to quit)
-    choice = input("\nWhich seat do you want? (1–20, or 0 to quit): ")
+    # Input validation
 
-    # Validate numeric input
+    choice = input("\nPick a seat number (0 to exit): ")
+
     if not choice.isdigit():
-        print("Invalid input. Please enter a number.")
+        print("\nPlease enter a valid number (1-20)")
         continue
 
     choice = int(choice)
 
+    # Exit switch
+
     if choice == 0:
-        print("Goodbye!")
+        print("\nGoodbye!")
         break
 
-    # 5. Handle invalid seat numbers
-    if choice < 1 or choice > 20:
-        print("That seat does not exist.")
-        continue
+    # Seat check
 
-    seat_name = f"seat {choice}"
+    if choice in seats:
+        seats.remove(choice)
+        print(f"\nSeat {choice} sold!")
+    else:
+        print("\nSorry, that seat is not available")
 
-    # 5. Handle seat already taken
-    if seat_name not in seats_available:
-        print("Sorry, that seat is already taken.")
-        continue
+    # Sold out
 
-    # 4. Remove the selected seat from the list
-    seats_available.remove(seat_name)
-    print(f"Your seat {choice} is confirmed!")
-
-    # Stop if no seats left
-    if not seats_available:
-        print("\nAll seats are sold out!")
+    if len(seats) == 0:
+        print("\nAll seats are sold out! Goodbye!")
         break
