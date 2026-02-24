@@ -31,6 +31,10 @@ messy_input = "   vOLUME_knob_11   "
 
 # --- TASK 3: THE VALIDATOR ðŸ” ---
 serial_number = "90210"
+if serial_number.isdigit():
+    print("\nValid Serial")
+else:
+    print("\nInvalid Serial, please enter a number. ")
 # TODO: Use .isdigit() to check validity.
 # Print "Valid Serial" if it is numeric, or "Invalid Serial" if it isn't.
 
