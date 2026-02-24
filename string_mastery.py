@@ -14,8 +14,15 @@ Name: [YOUR NAME HERE]
 
 # --- TASK 1: TUNING THE GUITAR ðŸŽ¸ ---
 instrument = "Acoustic Guitar"
+
+# Length of the string
 length = len(instrument)
 print(length)
+
+# First and last letter
+print(instrument[0])
+print(instrument[-1])
+
 
 # TODO: Print the length of 'instrument'
 # TODO: Print the first and last letter of 'instrument'
