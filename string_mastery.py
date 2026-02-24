@@ -15,6 +15,10 @@ Name: [YOUR NAME HERE]
 # --- TASK 1: TUNING THE GUITAR ðŸŽ¸ ---
 instrument = "Acoustic Guitar"
 
+# TODO: Print the length of 'instrument'
+# TODO: Print the first and last letter of 'instrument'
+# TODO: Use min() and max() to find and print the lowest and highest ASCII characters
+
 # Length of the string
 length = len(instrument)
 print(length)
@@ -24,9 +28,9 @@ print(instrument[0])
 print(instrument[-1])
 
 
-# TODO: Print the length of 'instrument'
-# TODO: Print the first and last letter of 'instrument'
-# TODO: Use min() and max() to find and print the lowest and highest ASCII characters
+# Lowest and highest ASCII characters
+print(min(instrument))
+print(max(instrument))
 
 
 # --- TASK 2: THE CLEANUP CREW ðŸ§µ ---
@@ -34,6 +38,8 @@ messy_input = "   vOLUME_knob_11   "
 # TODO: Use .strip() to remove spaces
 # TODO: Use .upper() to capitalize everything
 # TODO: Use .replace() to swap the underscores "_" for spaces " "
+
+clean_input = messy_input.strip()
 
 
 # --- TASK 3: THE VALIDATOR ðŸ” ---
