@@ -28,7 +28,7 @@ MONTHS = (
 for month in MONTHS:
     print(f"{month}")
 
-    print("\nAttempting to change month...")
+    print("\nAttempting illegal modification...")
 
 try:
     # Tuples are physically locked. This triggers a TypeError.
