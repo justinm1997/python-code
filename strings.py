@@ -1,3 +1,10 @@
+# Task 1: Basics (Length, Indexing, ASCII).
+# Task 2: Cleanup (Strip, Casing, Replace).
+# Task 3: Validation (isdigit check).
+# ask 4: The Ducky Loop (Using .join() and direct iteration).
+# Checklist Docstring present at the top.
+
+
 # 1. SETUP: Strings are immutable, so we use a list
 name_string = "BINGO"
 dog_letters = list(name_string)
