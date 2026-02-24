@@ -39,7 +39,10 @@ messy_input = "   vOLUME_knob_11   "
 # TODO: Use .upper() to capitalize everything
 # TODO: Use .replace() to swap the underscores "_" for spaces " "
 
-clean_input = messy_input.strip()
+cleaned = messy_input.strip()
+cleaned = cleaned.upper()
+cleaned = cleaned.replace("_", " ")
+print(cleaned)
 
 
 # --- TASK 3: THE VALIDATOR ðŸ” ---
