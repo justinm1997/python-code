@@ -13,9 +13,12 @@ SEMESTER = (
 )
 
 try:
+    # This will fail because tuples are immutable
     SEMESTER[0] = "Spring Break"
+
     for semester in SEMESTER:
-        print("semester")
+        print(semester)
+
     semester = int(
         input("Please enter the number of the semester you want to register for: ")
     )
@@ -23,6 +26,5 @@ try:
 except TypeError:
     print("That is not allowed to be changed")
 
-
 except Exception as e:
-    print("e")
+    print(e)
