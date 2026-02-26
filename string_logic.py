@@ -1,15 +1,12 @@
 """
-
 String Logic
-
 """
 
-# testing data
+# Testing data
 errors = True
 while errors:
-
     try:
-        name = input("Please enter your first and last name:  ").title()
+        name = input("Please enter your First and last name: ").title()
         first_name, last_name = name.split(" ")
         print(name)
         print(first_name)
@@ -17,7 +14,7 @@ while errors:
         print(f"{first_name[0]}{last_name[0]}")
         errors = False
     except ValueError as e:
-        print(f"You have a value error {e}")
+        print(f"You have a value error: {e}")
 
     except Exception as e:
-        print(f"This raised an exception {e}")
+        print(f"This raised an exception: {e}")
