@@ -17,7 +17,7 @@ while errors:
         print(f"{first_name[0]}{last_name[0]}")
         errors = False
     except ValueError as e:
-        print("You have a value error {e}")
+        print(f"You have a value error {e}")
 
     except Exception as e:
         print(f"This raised an exception {e}")
