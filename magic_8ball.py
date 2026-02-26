@@ -12,14 +12,6 @@ ASSIGNMENT 7B: THE MAGIC 8 BALL
 
 import random
 
-questions = True
-while questions:
-    print("Will I get a raise this year? ")
-    print("Will I be happy today? ")
-    print("Should I get a pet? ")
-
-
-# TODO: Create a tuple of at least 8 responses
 RESPONSES = (
     "Yes",
     "No",
@@ -31,7 +23,18 @@ RESPONSES = (
     "Signs point to yes",
 )
 
-print(f"Magic 8ball says: {RESPONSES}")
+print("Welcome to the Digital Oracle")
+print("Ask any yes/no question or type 'quit' to exit.\n")
+
+while True:
+    question = input("What is your question? ").strip().lower()
+
+    if "quit" in question:
+        print("Goodbye!")
+        break
+
+    answer = random.choice(RESPONSES)
+    print(answer)
 
 
 # TODO: Create a while loop that keeps asking questions
