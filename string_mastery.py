@@ -63,6 +63,18 @@ duck_letters = list(name_string)
 count = 0
 
 print("\n--- Singing the Duck Song! ---")
+current_name = " ".join(duck_letters)
+
+print("There was a teacher who had a duck and Ducky was his Name-o")
+print(f"{current_name} \n" * 3)
+print("and Ducky was his Name-o!\n")
+duck_letters[count] = "Ÿ¦†"
+count += 1
+
+final_name = " ".join(duck_letters)
+print(f"({final_name}) \n" * 3)
+print("and Ducky was his Name-o!")
+
 
 # TODO: Create a loop that iterates through name_string (for char in name_string)
 # TODO: Inside the loop:
