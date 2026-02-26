@@ -55,7 +55,7 @@ else:
 # Print "Valid Serial" if it is numeric, or "Invalid Serial" if it isn't.
 
 
-# --- TASK 4: THE DUCK BRIDGE ðŸ¦†ðŸŽµ ---
+# --- TASK 4: THE DUCK BRIDGE 🦆 ---
 # We are going to sing about a Duck!
 # We can't change strings (immutable), so we convert to a list
 name_string = "DUCKY"
@@ -63,13 +63,13 @@ duck_letters = list(name_string)
 count = 0
 
 print("\n--- Singing the Duck Song! ---")
-current_name = " ".join(duck_letters)
-
-print("There was a teacher who had a duck and Ducky was his Name-o")
-print(f"{current_name} \n" * 3)
-print("and Ducky was his Name-o!\n")
-duck_letters[count] = "Ÿ¦†"
-count += 1
+for char in name_string:
+    current_name = " ".join(duck_letters)
+    print("There was a teacher who had a duck and Ducky was his Name-o")
+    print(f"{current_name} \n" * 3)
+    print("and Ducky was his Name-o!\n")
+    duck_letters[count] = "🦆"
+    count += 1
 
 final_name = " ".join(duck_letters)
 print(f"({final_name}) \n" * 3)
@@ -82,7 +82,7 @@ print("and Ducky was his Name-o!")
 #       2. Print: "There was a teacher who had a duck and Ducky was his Name-o"
 #       3. Print the line f"({current_name}) \n" multiplied by 3
 #       4. Print "and Ducky was his Name-o!\n"
-#       5. Replace the letter in duck_letters at index [count] with "ðŸ¦†"
+#       5. Replace the letter in duck_letters at index [count] with "🦆"
 #       6. Increment count by 1
 
 # TODO: After the loop, print the "Finale" (the final version with all ðŸ¦† emojis)
