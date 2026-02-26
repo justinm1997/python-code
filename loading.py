@@ -1,3 +1,5 @@
+import time
+
 # 1. Start with an empty bar string
 empty_bar = "----------"
 bar_list = list(empty_bar)  # Breakdown to ["-", "-", ...]
@@ -11,5 +13,8 @@ for i in range(len(bar_list)):
     # JOIN back to a STRING to display
     current_status = "".join(bar_list)
     print(f"Status: [{current_status}]")
+
+    # Pause for 1 second before the next iteration
+    time.sleep(1)
 
 print("Liftoff!")
