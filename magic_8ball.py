@@ -27,7 +27,7 @@ print("Welcome to the Digital Oracle")
 print("Ask any yes/no question or type 'quit' to exit.\n")
 
 while True:
-    question = input("What is your question? ").strip().lower()
+    question = input("What is your question?").strip().lower()
 
     if "quit" in question:
         print("Goodbye!")
