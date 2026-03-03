@@ -43,8 +43,15 @@ NATO_ALPHABET = {  # ...COMPLETE A-Z
     "Z": "Zulu",
 }
 
+word = input("Enter letter for word: ").upper()
 
-word = input("Enter word to spell: ").upper()
+
+try:
+    letter = NATO_ALPHABET[word]
+    print(f"System output: {letter}")
+except KeyError:
+    print(f"!! DATA INTEGRITY WARNING: '{word}' is not in our system.")
+
 
 # TODO: Loop through each character
 # TODO: try to print the NATO code, except if character is missing
