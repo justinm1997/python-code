@@ -45,13 +45,11 @@ NATO_ALPHABET = {  # ...COMPLETE A-Z
 
 word = input("Enter letter for word: ").upper()
 
-print("\n Loading... ")
-
 for char in word:
     try:
-        print(f"{char} → {NATO_ALPHABET[char]}")
+        print(f"{char} for {NATO_ALPHABET[char]}")
     except KeyError:
-        print(f"{char} → [INVALID: Not a letter]")
+        print(f"{char} for [INVALID: Not a letter]")
 
 
 # TODO: Loop through each character
