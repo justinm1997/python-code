@@ -1,0 +1,96 @@
+""" Justin's Sprint 1 Review: Nutrition Tracker
+Part 1: The Mission
+Relying on memory is hard when trying to track your Nutrition, especially if you have a lot going on in your life. My idea is to build a Nutrition logging system that will prevent the user from over eating and know how much calories they are consuming instead of relying on their memory. Also will add a few habits some basic ones that are related to health/nutrition.
+
+Part 2: The Mockups
+Phase 2: Terminal Interaction (Input Logic)
+This is the backwards design for the user interface. It prioritizes clarity, confirmation and immediate feedback so users always know exactly what they logged.
+*** Nutrition Tracker ***
+
+Enter User Name: Nutrition Tracker
+
+--- MEAL TYPES ---
+1. Breakfast
+2. Lunch
+3. Dinner
+4. Snack
+Select Meal (1-4): 
+
+-----------------------------
+
+Enter Food Name: Grilled Chicken
+Enter Calories: 320
+Enter Protein (g): 30
+Enter Carbs (g): 0
+Enter Fat (g): 7
+----------------------------------
+(C)onfirm Entry | (E)dit Entry: C
+
+
+ENTRY PREVIEW:
+User: Justin
+Meal: Lunch
+Food: Grilled Chicken
+Macros: 320 kcal | 30P / 0C / 7F
+
+Phase 3: The Human-Facing Output (The Label)
+This is daily Summary output. It is designed for readability and quick scanning, emphasizing total intake and habit completion.
+
+====================================
+    Nutrition Tracker - Daily log
+====================================
+USER: Justin
+DATE: MARCH 5, 2026
+
+--- MEALS LOGGED ---
+LUNCH: Grilled Chicken (320 kcal)
+
+--- DAILY TOTALS ---
+Calories: 320
+Protein: 30g
+Carbs: 0g
+Fat: 7g
+
+--- HABITS ---
+Water Intake: ✔ 
+Steps Goal: ✘
+Sleep Goal: ✔
+------------------------------------
+STATUS: ON TRACK
+====================================
+
+Pantry Input (foods.txt): The system will not hard‑code nutrition values. It will read from an external file so the user or coach can update foods without touching the code.
+Sample Data: 
+
+Grilled Chicken,320,30,0,7
+Oatmeal,150,5,27,3
+Apple,95,0,25,0
+
+
+The Persistence Stream (Log_history.txt): Every confirmed entry appends a raw data string for weekly analysis.
+
+Justin, Lunch, Grilled Chicken, 320, 30, 0, 7
+
+The Human Stream (Summary_Justin.txt): The system will give a named summary file is generated for each day, formatted for easy reading or printing.
+
+Part 4: The Technical Blocker
+My current blocker is handling CRUD logic during the edit entry phase. If a user edits a meal before confirming, the system must clear the temporary entry object so old values don't show up in the final report.
+
+This requires a clean reset mechanism for the in‑progress entry and a safe commit process for confirmed entries
+
+🛡️ Checklist Docstring (Professional Standard)
+Python
+"""
+Project: Nutrition Tracker
+Developer: Justin
+Role: Lead Developer
+Sprint: 1 - Architecture & Design
+
+Features Included:
+- [x] Backwards Design (Output-First)
+- [x] File I/O Planning (foods.txt / log_history.txt)
+- [x] Object-Oriented Logic (FoodEntry & DailyLog Classes)
+- [x] Exception Handling (Try/Except for Input)
+- [x] CRUD Planning for Edit Entry Workflow
+"""
+
