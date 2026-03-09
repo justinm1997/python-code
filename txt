@@ -34,7 +34,7 @@ Food: Grilled Chicken
 Macros: 320 kcal | 30P / 0C / 7F
 
 Phase 3: The Human-Facing Output (The Label)
-This is daily Summary output. It is designed for readability and quick scanning, emphasizing total intake and habit completion.
+This is daily Summary output. It is designed for readability and quick scanning, emphasizing total intake and daily activities completion.
 
 ====================================
     Nutrition Tracker - Daily log
@@ -51,11 +51,11 @@ Protein: 30g
 Carbs: 0g
 Fat: 7g
 
---- HABITS ---
+--- Daily activities ---
 Water Intake: ✔ 
 Steps Goal: ✘
 Sleep Goal: ✔
-------------------------------------
+====================================
 STATUS: ON TRACK
 ====================================
 
