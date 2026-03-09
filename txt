@@ -1,6 +1,6 @@
 """ Justin's Sprint 1 Review: Nutrition Tracker
 Part 1: The Mission
-Relying on memory is hard when trying to track your Nutrition, especially if you have a lot going on in your life. My idea is to build a Nutrition logging system that will prevent the user from over eating and know how much calories they are consuming instead of relying on their memory. Also will add a few habits some basic ones that are related to health/nutrition.
+Relying on memory is hard when trying to track your Nutrition, especially if you have a lot going on in your life. My idea is to build a Nutrition logging system that will prevent the user from over eating and know how much calories they are consuming instead of relying on their memory. Also will add a few daily activites, some basic ones that are related to health/nutrition.
 
 Part 2: The Mockups
 Phase 2: Terminal Interaction (Input Logic)
