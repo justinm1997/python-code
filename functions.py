@@ -42,3 +42,25 @@ def main ():
     
 main()
 
+
+
+# """
+functions with date
+
+
+
+def greeting(name)
+    print(f"Welcome to the introduction to programming, {name}")
+
+    return status
+
+def main():
+    name = input("Hi friend! what is your name")
+    greeting(name)
+    identification = "quinn"
+    
+
+
+main()
+
+"""
