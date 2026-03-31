@@ -1,6 +1,6 @@
 """ Justin's Sprint 1 Review: Nutrition Tracker
 Part 1: The Mission
-Relying on memory is hard when trying to track your Nutrition, especially if you have a lot going on in your life. My idea is to build a Nutrition logging system that will prevent the user from over eating and know how much calories they are consuming instead of relying on their memory. Also will add a few habits some basic ones that are related to health/nutrition.
+Relying on memory is hard when trying to track your Nutrition, especially if you have a lot going on in your life. My idea is to build a Nutrition logging system that will prevent the user from over eating and know how much calories they are consuming instead of relying on their memory. Also will add a few daily activites, some basic ones that are related to health/nutrition.
 
 Part 2: The Mockups
 Phase 2: Terminal Interaction (Input Logic)
@@ -34,13 +34,13 @@ Food: Grilled Chicken
 Macros: 320 kcal | 30P / 0C / 7F
 
 Phase 3: The Human-Facing Output (The Label)
-This is daily Summary output. It is designed for readability and quick scanning, emphasizing total intake and habit completion.
+This is daily Summary output. It is designed for readability and quick scanning, emphasizing total intake and daily activities completion.
 
 ====================================
     Nutrition Tracker - Daily log
 ====================================
 USER: Justin
-DATE: MARCH 5, 2026
+DATE: MARCH 9, 2026
 
 --- MEALS LOGGED ---
 LUNCH: Grilled Chicken (320 kcal)
@@ -51,15 +51,15 @@ Protein: 30g
 Carbs: 0g
 Fat: 7g
 
---- HABITS ---
+--- Daily activities ---
 Water Intake: ✔ 
 Steps Goal: ✘
 Sleep Goal: ✔
-------------------------------------
+====================================
 STATUS: ON TRACK
 ====================================
 
-Pantry Input (foods.txt): The system will not hard‑code nutrition values. It will read from an external file so the user or coach can update foods without touching the code.
+Pantry Input (foods.txt): The system will not hard‑code nutrition values. It will read from an external file so the user can update foods without touching the code.
 Sample Data: 
 
 Grilled Chicken,320,30,0,7
@@ -76,7 +76,7 @@ The Human Stream (Summary_Justin.txt): The system will give a named summary file
 Part 4: The Technical Blocker
 My current blocker is handling CRUD logic during the edit entry phase. If a user edits a meal before confirming, the system must clear the temporary entry object so old values don't show up in the final report.
 
-This requires a clean reset mechanism for the in‑progress entry and a safe commit process for confirmed entries
+This requires a clean reset for the in‑progress entry and a safe commit process for confirmed entries
 
 🛡️ Checklist Docstring (Professional Standard)
 Python
