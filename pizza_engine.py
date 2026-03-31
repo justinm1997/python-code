@@ -10,3 +10,5 @@ ASSIGNMENT 10A: THE RESILIENT PIZZA ENGINE
 [ ] 6. main() calls the function using KEYWORD ARGUMENTS.
 -----------------------------------------------------------------------
 """
+
+TOPPINGS = ("pepperoni", "sausage", "veggies", "mushrooms")
