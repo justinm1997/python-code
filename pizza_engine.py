@@ -12,3 +12,32 @@ ASSIGNMENT 10A: THE RESILIENT PIZZA ENGINE
 """
 
 TOPPINGS = ("pepperoni", "sausage", "veggies", "mushrooms")
+
+
+def make_pizza(customer, size, topping, is_delivery=False):
+
+    print(f"\n--- OFFICIAL TICKET: {customer.upper()} ---")
+    print(f"Pizza size: {size}")
+    print(f"Topping: {topping}")
+    print(f"Delivery {is_delivery}")
+
+
+def main():
+    user = input("Customer Name: ")
+    print(f"Available Toppings: {TOPPINGS}")
+    topping_choice = input("Select topping: ").title()
+
+    try:
+        size_choice = input("Choose size(Small/Medium/Large):  ").title()
+    except ValueError:
+        print("Invalid input. Defaulting to Medium")
+        size = "Medium"
+
+    make_pizza(
+        customer=user,
+        size=size_choice,
+        topping=topping_choice,
+    )
+
+
+main()
