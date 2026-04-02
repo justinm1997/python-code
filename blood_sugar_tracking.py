@@ -8,7 +8,7 @@ calculated average.... to come
 
 import datetime
 
-get_sugar():
+def get_sugar():
     # 2. Ask the user for their data
     blood_sugar = input("Enter your current blood sugar level: ")
     return blood_sugar
