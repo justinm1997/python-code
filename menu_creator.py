@@ -35,6 +35,7 @@ def save_to_file(menu):
         print(all_items)
         for item in all_items:
             item = item.split(",")
+        # print(item) to check
 
 
 def main():
