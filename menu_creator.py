@@ -24,19 +24,17 @@ def get_menu_options():
         # add to dictionary
         menu[category] = items
 
-    print(menu)
-
     return menu
 
 
 def save_to_file(menu):
-    pass
-    # 3. Store it in a dictionary using the timestamp as the key
-    # health_log = {timestamp_str: blood_sugar}
 
     # 4. Append ('a' mode) the new entry to our text file so it grows over time
-    # with open("blood_sugar_log.txt", "a") as file:
-    #    file.write(f"[{timestamp_str}] : {health_log[timestamp_str],}\n")
+    with open("menu.txt", "a") as file:
+        all_items = menu.items()
+        print(all_items)
+        for item in all_items:
+            item = item.split(",")
 
 
 def main():
