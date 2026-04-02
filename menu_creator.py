@@ -35,6 +35,10 @@ def save_to_file(menu):
         print(all_items)
         for item in all_items:
             item = item.split(",")
+            output = (f"{item[0]} : {item[1]})
+            print(menu.txt)
+            file.write(output + "\n")
+
         # print(item) to check
 
 
