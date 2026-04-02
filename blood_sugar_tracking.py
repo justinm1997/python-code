@@ -6,29 +6,34 @@ calculated average.... to come
 
 """
 
-# Store the menu data
-menu_dict = {}
+import datetime
 
-while True:
-    category = input("Enter a category (or 'quit' to stop): ")
-    if category.lower() == "quit":
-        break
+get_sugar():
+    # 2. Ask the user for their data
+    blood_sugar = input("Enter your current blood sugar level: ")
+    return blood_sugar
 
-    items_str = input(f"Enter {category} items separated by commas: ")
+def save_to_file(timestamp_str, blood_sugar):
+    # 3. Store it in a dictionary using the timestamp as the key
+    health_log = {
+        timestamp_str: blood_sugar
+}
 
-    # Convert string to list and store in dictionary
-    items_list = [item.strip() for item in items_str.split(",")]
-    menu_dict[category] = items_list
+    # 4. Append ('a' mode) the new entry to our text file so it grows over time
+    with open("blood_sugar_log.txt", "a") as file:
+        file.write(f"[{timestamp_str}] Blood Sugar: {health_log[timestamp_str]}\n")
 
-# Setup a clean file with 'w' write mode once the loop finishes
-with open("menu.txt", "w") as file:
-    # Loop through the dictionary and write each section
-    for category_name, items in menu_dict.items():
-        file.write(f"--- {category_name.upper()} ---\n")
 
-        # Loop through the item list
-        for food in items:
-            file.write(f" - {food}\n")
 
-        # Add a blank line between categories
-        file.write("\n")
+def main():
+
+
+# 1. Get the current time and format it nicely
+
+bs = get_sugar()
+current_time = datetime.datetime.now()
+timestamp_str = current_time.strftime("%Y-%m-%d %H:%M:%S")
+save_to_file(timestamp_str, )
+
+print("Health data successfully logged!")
+main()
