@@ -48,7 +48,7 @@ def calculate_total(order_data):
     # Base prices by category
     category_prices = {
         "Taco": 3.00,
-        "Burrito": 9.00,
+        "Burrito": 8.00,
         "Nachos": 10.00
     }
 
@@ -60,7 +60,7 @@ def calculate_total(order_data):
     }
 
     # Extras cost (each)
-    extra_cost = 0.35
+    extra_cost = 0.50
 
     # Determine base price
     base = category_prices.get(order_data["category"], 3.00)
