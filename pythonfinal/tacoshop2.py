@@ -73,10 +73,14 @@ def calculate_total(order_data):
 
     return base + protein_cost + extras_total
 
-def save_data_and_label(customer, location, total):
+def save_data_and_label(customer, location, total, order_data):
     """Appends to order_history.txt and prints the human-readable label."""
     print(f"--- KITCHEN TICKET ---")
     print(f"TABLE NUMBER: {location} | ATTN: {customer}")
+    print(f"ITEM: {order_data['category']}")
+    print(f"TORTILLA: {order_data['tortilla']}")
+    print(f"PROTEIN: {order_data['protein']}")
+    print(f"EXTRAS: {', '.join(order_data['extras']) if order_data['extras'] else 'None'}")
     print(f"TOTAL: ${total:.2f}")
 
 def main():
@@ -90,6 +94,6 @@ def main():
     final_price = calculate_total(current_order)
 
     # 4. Handoff Phase (Using KEYWORD ARGUMENTS)
-    save_data_and_label(customer=name, location=location, total=final_price)
+    save_data_and_label(customer=name, location=location, total=final_price, order_data=current_order)
 
 main()
