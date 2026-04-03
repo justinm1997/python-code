@@ -17,24 +17,66 @@ def get_customer_info():
     return name, location
 
 def take_order():
-    """Collects choices. Notice the tuple usage for milk options."""
-    cat = input("Drink Category (Coffee/Tea/Cocoa): ")
-    size = input("Size (Small/Medium/Large): ")
-    print(f"Available Milk: {MILK_OPTIONS}")
-    milk = input("Choice of milk: ")
-    pumps = int(input("How many pumps? "))
-    return {"category": cat, "size": size, "milk": milk, "pumps": pumps}
+    """Collects taco category, tortilla, protein, and extras. Returns data."""
+
+    # Category selection
+    print("Category Options: Taco / Burrito / Nachos")
+    category = input("Choose category: ").title()
+
+    # Tortilla selection
+    print("Tortilla Options: Flour / Corn")
+    tortilla = input("Choose tortilla: ").title()
+
+    # Protein selection
+    print("Protein Options: Beef / Chicken / Steak")
+    protein = input("Choose protein: ").title()
+
+    # Extras (comma separated)
+    extras = input("Extras (comma separated, e.g., Cheese, Salsa, Onion): ")
+    extras_list = [e.strip().title() for e in extras.split(",")] if extras else []
+
+    return {
+        "category": category,
+        "tortilla": tortilla,
+        "protein": protein,
+        "extras": extras_list
+    }
 
 def calculate_total(order_data):
-    """Calculates price based on size and pumps."""
-    base_price = 4.00
-    syrup_cost = order_data["pumps"] * 0.10
-    return base_price + syrup_cost
+    """Calculates price based on category, protein, and extras."""
+
+    # Base prices by category
+    category_prices = {
+        "Taco": 3.00,
+        "Burrito": 9.00,
+        "Nachos": 10.00
+    }
+
+    # Protein upcharges
+    protein_upcharge = {
+        "Beef": 1.00,
+        "Chicken": 1.00,
+        "Steak": 2.00
+    }
+
+    # Extras cost (each)
+    extra_cost = 0.35
+
+    # Determine base price
+    base = category_prices.get(order_data["category"], 3.00)
+
+    # Add protein cost
+    protein_cost = protein_upcharge.get(order_data["protein"], 0)
+
+    # Add extras cost
+    extras_total = len(order_data["extras"]) * extra_cost
+
+    return base + protein_cost + extras_total
 
 def save_data_and_label(customer, location, total):
     """Appends to order_history.txt and prints the human-readable label."""
     print(f"--- KITCHEN TICKET ---")
-    print(f"ROOM: {location} | ATTN: {customer}")
+    print(f"TABLE NUMBER: {location} | ATTN: {customer}")
     print(f"TOTAL: ${total:.2f}")
 
 def main():
