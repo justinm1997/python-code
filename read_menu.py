@@ -20,14 +20,15 @@ try:
             menus[category] = detail
     
         return menus
-    except Exception as e:
-        print(e)
+except Exception as e:
+    print(e)
 
 
 
 def split_into_variables(menu_items):
     """ break the menu file into separate variables """
-    
+    coffee = menu_items.get("COFFEE")
+
 
 
 
