@@ -10,14 +10,20 @@ TORTILLA_OPTIONS = ("Corn", "Flour")
 MEAT_OPTIONS = ("Chicken", "Beef", "Steak")
 TOPPING_OPTIONS = ("Lettuce", "Tomato", "Cheese", "Onion", "Salsa")
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3c3d1c36a16b466bf62e46046a7f491531eb8279
 def get_customer_info():
     """Asks for name and Table number."""
     name = input("Customer Name: ").title()
     location = input("Table Number: ")
     return name, location
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3c3d1c36a16b466bf62e46046a7f491531eb8279
 def take_order():
     """Collects taco category, tortilla, protein, and extras. Returns data."""
 
@@ -41,18 +47,39 @@ def take_order():
         "category": category,
         "tortilla": tortilla,
         "protein": protein,
+<<<<<<< HEAD
         "extras": extras_list,
     }
 
 
+=======
+        "extras": extras_list
+    }
+
+>>>>>>> 3c3d1c36a16b466bf62e46046a7f491531eb8279
 def calculate_total(order_data):
     """Calculates price based on category, protein, and extras."""
 
     # Base prices by category
+<<<<<<< HEAD
     category_prices = {"Taco": 3.00, "Burrito": 8.00, "Nachos": 10.00}
 
     # Protein upcharges
     protein_upcharge = {"Beef": 1.00, "Chicken": 1.00, "Steak": 2.00}
+=======
+    category_prices = {
+        "Taco": 3.00,
+        "Burrito": 8.00,
+        "Nachos": 10.00
+    }
+
+    # Protein upcharges
+    protein_upcharge = {
+        "Beef": 1.00,
+        "Chicken": 1.00,
+        "Steak": 2.00
+    }
+>>>>>>> 3c3d1c36a16b466bf62e46046a7f491531eb8279
 
     # Extras cost (each)
     extra_cost = 0.50
@@ -68,7 +95,10 @@ def calculate_total(order_data):
 
     return base + protein_cost + extras_total
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3c3d1c36a16b466bf62e46046a7f491531eb8279
 def save_data_and_label(customer, location, total, order_data):
     """Appends to order_history.txt and prints the human-readable label."""
     print(f"--- KITCHEN TICKET ---")
@@ -76,12 +106,18 @@ def save_data_and_label(customer, location, total, order_data):
     print(f"ITEM: {order_data['category']}")
     print(f"TORTILLA: {order_data['tortilla']}")
     print(f"PROTEIN: {order_data['protein']}")
+<<<<<<< HEAD
     print(
         f"EXTRAS: {', '.join(order_data['extras']) if order_data['extras'] else 'None'}"
     )
     print(f"TOTAL: ${total:.2f}")
 
 
+=======
+    print(f"EXTRAS: {', '.join(order_data['extras']) if order_data['extras'] else 'None'}")
+    print(f"TOTAL: ${total:.2f}")
+
+>>>>>>> 3c3d1c36a16b466bf62e46046a7f491531eb8279
 def main():
     # 1. Identity Phase
     name, location = get_customer_info()
@@ -93,9 +129,13 @@ def main():
     final_price = calculate_total(current_order)
 
     # 4. Handoff Phase (Using KEYWORD ARGUMENTS)
+<<<<<<< HEAD
     save_data_and_label(
         customer=name, location=location, total=final_price, order_data=current_order
     )
 
+=======
+    save_data_and_label(customer=name, location=location, total=final_price, order_data=current_order)
+>>>>>>> 3c3d1c36a16b466bf62e46046a7f491531eb8279
 
 main()

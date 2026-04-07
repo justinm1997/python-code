@@ -9,9 +9,9 @@ MENU_FILE = "taco_menu"
 
 
 def get_customer_info():
-    """Asks for name and office location."""
-    # TODO: Ask for name and order number
-    return "Justin Moravec", "Order Number 1"
+    """Asks for name and table number"""
+    # TODO: Ask for name and table number
+    return "Justin Moravec", "Table Number 1"
 
 
 def take_order():
