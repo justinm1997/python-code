@@ -9,10 +9,23 @@ test reading in our menu and creating list and dictonaries
 
 def read_menu()
     """read menu will import menu.txt and pull it into a list. we can then break down the list into the specific variables and dictonaires that we need """
-    try:
+menus = {}
+try: 
+    # open and read file
+    with open("menu.txt", 'r') as file:
+        for line in f:
+            parts_of_line - line.strip().split(':')
+            category = parts_of_line[0]
+            detail = parts_of_line[1]
+            menus[category] = detail
+    
+    for x, y in menu.items():
+        print(x, y)
+        
 
 
-    except Exception as e:
+
+        except Exception as e:
         print(e)
 
 
