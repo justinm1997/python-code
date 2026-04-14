@@ -44,3 +44,13 @@ class Employee:
         print(
             f"{self.fname} {self.lname} \nextension: {self.extension} \nemployee number: {self.emp_num}"
         )
+
+    """
+    create an employee object
+    """
+
+    emp1 = Employee("Justin", "Moravec", "40404", 222)
+    emp2 = Employee("Monty", "Pyduck", "23232", 982)
+
+    print(emp1.get_fname(), emp1.get_lname())
+    emp2.description()
