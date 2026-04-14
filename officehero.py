@@ -41,7 +41,7 @@ def main():
 
     total_cost, order_status = process_expenses(price=item_price, quantity=item_qty)
 
-    print("\n----- Expense Summary -----")
+    print("\n Expense Summary")
     print(f"Total Cost: ${total_cost:.2f}")
     print(f"Order Type: {order_status}")
 
