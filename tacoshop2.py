@@ -14,7 +14,13 @@ TOPPING_OPTIONS = ("Lettuce", "Tomato", "Cheese", "Onion", "Salsa")
 def get_customer_info():
     """Asks for name and Table number."""
     name = input("Customer Name: ").title()
-    location = input("Table Number: ")
+    while True:
+        location = input("Table Number: ")
+        if location.isdigit():
+            break
+        else:
+            print("Invalid input. Table number must be numbers only.")
+
     return name, location
 
 
