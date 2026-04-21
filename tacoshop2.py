@@ -127,16 +127,16 @@ def save_data_and_label(customer, location, total, order_data):
 
 
 def main():
-    # 1. Identity Phase
+    # 1. Identity 
     name, location = get_customer_info()
 
-    # 2. Data Collection Phase
+    # 2. Data Collection 
     current_order = take_order()
 
-    # 3. Calculation Phase
+    # 3. Calculation
     final_price = calculate_total(current_order)
 
-    # 4. Handoff Phase 
+    # 4. Handoff 
     save_data_and_label(
         customer=name, location=location, total=final_price, order_data=current_order
     )
