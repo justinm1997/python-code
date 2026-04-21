@@ -88,7 +88,7 @@ def calculate_total(order_data):
     protein_upcharge = {"Beef": 1.00, "Chicken": 1.00, "Steak": 2.00}
 
     # Extras cost (each)
-    extra_cost = 0.50
+    extra_cost = 0.25
 
     # Determine base price
     base = category_prices.get(order_data["category"], 3.00)
