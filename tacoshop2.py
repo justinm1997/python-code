@@ -1,47 +1,74 @@
-"""
-ASSIGNMENT 10B: SPRINT 3 - REFACTORING & DATA ACCOUNTABILITY
-Project: Taco Shop (V3.0)
-Developer: Justin Moravec
-"""
-
 # GLOBAL CONSTANTS (Pantry Rules)
 MENU_FILE = "menu.txt"
 TORTILLA_OPTIONS = ("Corn", "Flour")
 MEAT_OPTIONS = ("Chicken", "Beef", "Steak")
-TOPPING_OPTIONS = ("Lettuce", "Tomato", "Cheese", "Onion", "Salsa")
+TOPPING_OPTIONS = ("Lettuce", "Cilantro", "Tomato", "Cheese", "Onion", "Salsa")
+CATEGORY_OPTIONS = ("Taco", "Burrito", "Nachos")
 
 
 def get_customer_info():
-    """Asks for name and Table number."""
+    """Asks for name and Table number with validation."""
     name = input("Customer Name: ").title()
+
     while True:
         location = input("Table Number: ")
         if location.isdigit():
             break
-        else:
-            print("Invalid input. Table number must be numbers only.")
+        print("Invalid input. Table number must be numbers only.")
 
     return name, location
 
 
 def take_order():
-    """Collects taco category, tortilla, protein, and extras. Returns data."""
+    """Collects taco category, tortilla, protein, and extras with validation."""
 
-    # Category selection
+    # CATEGORY
     print("Category Options: Taco / Burrito / Nachos")
-    category = input("Choose category: ").title()
+    while True:
+        category = input("Choose category: ").title()
+        if category in CATEGORY_OPTIONS:
+            break
+        print("Invalid choice. Please choose Taco, Burrito, or Nachos.")
 
-    # Tortilla selection
-    print("Tortilla Options: Flour / Corn")
-    tortilla = input("Choose tortilla: ").title()
+    # TORTILLA (only for Taco)
+    if category == "Taco":
+        print("Tortilla Options: Flour / Corn")
+        while True:
+            tortilla = input("Choose tortilla: ").title()
+            if tortilla in TORTILLA_OPTIONS:
+                break
+            print("Invalid choice. Please choose Flour or Corn.")
+    else:
+        tortilla = "N/A" 
 
-    # Protein selection
+    # PROTEIN
     print("Protein Options: Beef / Chicken / Steak")
-    protein = input("Choose protein: ").title()
+    while True:
+        protein = input("Choose protein: ").title()
+        if protein in MEAT_OPTIONS:
+            break
+        print("Invalid choice. Please choose Beef, Chicken, or Steak.")
 
-    # Extras (comma separated)
-    extras = input("Extras (comma separated, e.g., Cheese, Salsa, Onion): ")
-    extras_list = [e.strip().title() for e in extras.split(",")] if extras else []
+    # EXTRAS (validation)
+    print("Extras Options: Lettuce, Tomato, Cheese, Onion, Salsa")
+    while True:
+        extras = input("Extras (comma separated, optional): ").strip()
+
+        # Allow empty input (no extras)
+        if extras == "":
+            extras_list = []
+            break
+
+        # Process list
+        raw_list = [e.strip().title() for e in extras.split(",")]
+
+        # Validate all extras
+        if all(e in TOPPING_OPTIONS for e in raw_list):
+            extras_list = raw_list
+            break
+        else:
+            print("Invalid topping detected. Please enter only valid toppings.")
+            print("Valid options: Lettuce, Cilantro, Tomato, Cheese, Onion, Salsa")
 
     return {
         "category": category,
@@ -77,6 +104,8 @@ def calculate_total(order_data):
 
 def save_data_and_label(customer, location, total, order_data):
     """Appends to order_history.txt and prints the human-readable label."""
+
+    # Print ticket
     print(f"--- KITCHEN TICKET ---")
     print(f"TABLE NUMBER: {location} | NAME: {customer}")
     print(f"ITEM: {order_data['category']}")
@@ -86,6 +115,15 @@ def save_data_and_label(customer, location, total, order_data):
         f"EXTRAS: {', '.join(order_data['extras']) if order_data['extras'] else 'None'}"
     )
     print(f"TOTAL: ${total:.2f}")
+
+    # Save to file
+    with open("order_history.txt", "a") as file:
+        file.write(
+            f"{customer},{location},{order_data['category']},"
+            f"{order_data['tortilla']},{order_data['protein']},"
+            f"{'|'.join(order_data['extras']) if order_data['extras'] else 'None'},"
+            f"{total:.2f}\n"
+        )
 
 
 def main():
@@ -98,7 +136,7 @@ def main():
     # 3. Calculation Phase
     final_price = calculate_total(current_order)
 
-    # 4. Handoff Phase (Using KEYWORD ARGUMENTS)
+    # 4. Handoff Phase 
     save_data_and_label(
         customer=name, location=location, total=final_price, order_data=current_order
     )
